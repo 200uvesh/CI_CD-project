@@ -20,15 +20,15 @@ jobs:
         push: true
         tags: render/$GITHUB_REPOSITORY:latest
       env:
-        DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
-        DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
+        DOCKER_USERNAME: ${{secrets.DOCKER_USERNAME }}
+        DOCKER_PASSWORD: ${{secrets.DOCKER_PASSWORD }}
 
     - name: Deploy to Render
       run: |
         render deploy --force
       env:
 
-        RENDER_TOKEN: ${{ secrets.RENDER_API_KEY }}  # Use the secret here
+        RENDER_TOKEN: ${{secrets.RENDER_API_KEY }}  # Use the secret here
 
 
  
